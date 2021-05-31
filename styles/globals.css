@@ -1,9 +1,12 @@
 html,
 body {
   padding: 0;
-  margin: 0;
+  margin: 40px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: white;
+  color: black;
+
 }
 
 a {
@@ -13,4 +16,263 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/*.Container {*/
+/*  display: grid;*/
+/*  grid-template-columns: auto auto auto;*/
+/*  grid-auto-columns: 200px;*/
+/*  grid-gap: 10px;*/
+/*  background-color: #fff;*/
+/*  color: #444;*/
+/*}*/
+
+/*.Card{*/
+/*  background-color: #444;*/
+/*  color: #fff;*/
+/*  border-radius: 5px;*/
+/*  padding: 20px;*/
+/*  font-size: 150%;*/
+/*}*/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.content {
+  background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.1) 50%,
+          rgba(0, 0, 0, 0.05) 50%
+  );
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  margin-bottom: 20px;
+}
+
+.content a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  background: #fff;
+  color: #121214;
+  padding: 10px 5px;
+  font-weight: 600;
+}
+.cardOR {
+  width: 280px;
+  height: 360px;
+  background: linear-gradient(45deg, #ffcc00 0%, #ff0058 100%);
+  margin: 40px 30px;
+  padding: 5px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.cardOR:hover {
+  transform: translatey(-20px);
+}
+
+.cardOR::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  top: 0;
+  left: 0;
+  filter: blur(30px);
+}
+.cardOR span {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+.cardBR {
+  width: 280px;
+  height: 360px;
+  background: linear-gradient(315deg, #03a9f4 0%, #ff0058 100%);
+  margin: 40px 30px;
+  padding: 5px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.cardBR:hover {
+  transform: translatey(-20px);
+}
+
+.cardBR::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  top: 0;
+  left: 0;
+  filter: blur(30px);
+}
+.cardBR span {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+
+.cardGB {
+  width: 280px;
+  height: 360px;
+  background: linear-gradient(315deg, #4dff03 0%, #00d0ff 100%);
+  margin: 40px 30px;
+  padding: 5px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.cardGB:hover {
+  transform: translatey(-20px);
+}
+
+.cardGB::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  top: 0;
+  left: 0;
+  filter: blur(30px);
+}
+.cardGB span {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.space{
+  height: 3000px;
+}
+@media only screen and (min-width: 1000px){
+  .space{
+    height: 1500px;
+  }
+}
+@media only screen and (min-width: 1190px){
+  .space{
+    height: 1000px;
+  }
+}
+.Title{
+    font-size: 300%;
+}
+
+.LandingCardBody{
+  /* background: rgb(75, 108, 175); */
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* .card  */
+.LandingCardCard{
+  background: linear-gradient(315deg, #ffffff 0%, #ffffff 100%);
+  border-radius: 4px;
+  height: 85vh;
+  width: 69vw;
+  max-width: 69vw;
+  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  padding: 0em;
+  overflow: hidden;
+  margin: 40px 30px;
+  position: relative;
+  transition: 0.5s;
+}
+
+
+@media only screen and (min-width: 1000px) {
+  /* .card */
+  .LandingCardCard{
+    flex-direction: row-reverse;
+  }
+
+  .LandingCardCard img.birthday {
+    width: 100%;
+    max-width: 50vw;
+    max-height: unset;
+    border-radius: 50px;
+
+  }
+}
+
+@media only screen and (max-height: 640px) {
+  .LandingCardCard {
+    flex-direction: row-reverse;
+    max-height: 150px;
+    width: 100%;
+  }
+  .LandingCardCard img.birthday {
+    width: 100%;
+    max-width: 50vw;
+    max-height: unset;
+    border-radius: 45px;
+  }
+}
+
+img.birthday {
+  max-height: 40vh;
+}
+
+/* .text  */
+
+.LandingCardText{
+  padding: 1em;
+}
+
+/* .muted */
+
+.LandingCardMuted{
+  opacity: 0.8;
+}
+
+/* .space */
+.LandingCardSpace {
+  height: 100px;
+}
+
+.FlowingText{
+  color: #121214;
 }
